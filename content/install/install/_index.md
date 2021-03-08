@@ -59,7 +59,7 @@ PureLB will operate without making this change, however kubeproxy is set to IPVS
 ### Installing PureLB
 
 ```plaintext
-# kubectl apply -f https://gitlab.com/purelb/purelb/-/raw/main/deployments/purelb-complete.yaml
+# kubectl apply -f https://public:cCBr-URZKP-fFhAnWrZE@gitlab.com/api/v4/projects/20400619/packages/generic/manifest/0.0.1/purelb-complete.yaml
 ```
 
 ### Verify Installation
