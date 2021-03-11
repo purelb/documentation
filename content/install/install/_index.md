@@ -8,9 +8,9 @@ hide: toc
 PureLB can be installed from:
 
 
-* Manifest
+* Manifest (installs the most recent released version)
 * Helm Chart (coming soon)
-* Source repository
+* Source repository (use this if you want to specify a specific release)
 
 
 
@@ -56,6 +56,8 @@ PureLB will operate without making this change, however if kubeproxy is set to I
 {{% /notice %}}
 
 ### Installing PureLB
+
+This installs the most recent released version of PureLB 
 
 ```plaintext
 # kubectl apply -f https://public:cCBr-URZKP-fFhAnWrZE@gitlab.com/api/v4/projects/20400619/packages/generic/manifest/0.0.1/purelb-complete.yaml
