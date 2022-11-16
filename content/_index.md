@@ -12,9 +12,11 @@ hide: toc, breadcrumb
 
 </br>
 
-**_PureLB_** is a Service Load Balancer Controller for Kubernetes.  A LoadBalancer is a Service type that allows configuration of network components external to Kubernetes to enable network access to the specified application resources. 
+**_PureLB_** is a Dual Stack Service Load Balancer and Egress Controller for Kubernetes.  A LoadBalancer is a Service type that allows configuration of network components external to Kubernetes to enable network access to the specified application resources. 
 
 The resources that PureLB controls is the host Linux networking stack, adding addresses to either Network Interface Cards enabling access from the local host network or to a virtual interface named kube-lb0 so the address can be distributed to routers.
+
+Egress functionality added to the Service LoadBalancer Controller allows traffic originated from the cluster to use the same IP address allocated for external access
 
 Service Load Balancers are key component in the K8s developer workflow.  They allow access resources to be pre-defined so they can be accessed on demand by developers via service definition.  This simple operation can be undertaken on demand or as part of CI without custom configuration or tooling.   
 
@@ -33,6 +35,9 @@ Addresses matching the local host address are automatically added to the default
 
 * **Routing.**
 All non-local addresses are added to a virtual interface for distribution by routing software or CNI unlocking full routing functionality.
+
+* **Egress Controller**
+Ensure that the same address is used for packets that are originated in the cluster where an external address has been allocated to a service.
 
 * **Service Groups.**
 Configurable policy, address & network configuration & load balancer behavior.
