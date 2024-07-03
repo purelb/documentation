@@ -1,20 +1,8 @@
 ---
-image: "${CI_TEMPLATE_REGISTRY_HOST}/pages/hugo/hugo_extended:0.123.8"
-
-variables:
-  GIT_SUBMODULE_STRATEGY: recursive
-
-test:
-  script:
-  - hugo
-  rules:
-  - if: $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
-
 pages:
-  script:
-  - hugo
+  script: [ "true" ]
   artifacts:
     paths:
     - public
-  rules:
-  - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  # rules:
+  # - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
